@@ -1,14 +1,17 @@
 import React from "react";
-import Nav from "./componets/Nav";
-import Info from "./componets/Info";
-
+import Welcome from "./componets/Welcome";
+import {Nav} from "./componets/Nav";
+import {Route, Routes} from "react-router-dom"
+import { Info } from "./componets/Info"
 function App() {
   return (
     <>
+    <Routes>
+      <Route path="/"/>
+      <Route path="Info" element={<Info />}/>
+    </Routes>
     <Nav />
-    <Info />
-      <div></div>
-  
+    <Welcome />
     </>
     
   );
